@@ -1,0 +1,22 @@
+
+#Imprimir numero pares de 1 a 101
+for i in range (2,20,2): 
+    print(i)
+
+#Imprimir numeros y señalar cuales son pares. 
+print("\n")
+for i in range (2,20): 
+    if (i%2==0):
+        print(i,"Es par")
+    else:
+        print(i,"Es impart")
+#Imprimir serie de Fibonacci 
+print ("\n")
+def fibonacci(n): 
+    secuencia=[0,1]
+    while len(secuencia)<n: 
+        siguiente_valor = secuencia[-1] + secuencia[-2]  # Sumar los dos últimos valores de la secuencia
+        secuencia.append(siguiente_valor)
+    return secuencia
+
+print(fibonacci(10))
