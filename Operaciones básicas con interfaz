@@ -1,0 +1,27 @@
+#Operaciones con interfaz 
+from tkinter import *
+from tkinter import messagebox
+interfaz=Tk() #Inicio de la interfaz
+interfaz.geometry("500x300+100+100")
+interfaz.title("Operaciones basicas de dos numeros")
+
+def calcular(): 
+    n1Aux=n1.get()
+    n2Aux=n2.get()
+    suma=n1Aux+n2Aux
+    resta=n1Aux-n2Aux
+    multi=n1Aux*n2Aux
+    messagebox.showinfo(title="Respuesta", message="La suma es:" + str(suma) + "\nLa resta es:" + str(resta) + "\nLa multiplicacion es:" + str(multi))
+
+
+lblPregunta1=Label(interfaz,text="Ingrese el primer numero").place(x=10, y=10)
+n1=DoubleVar()
+txtPregunta1=Entry(interfaz,textvariable=n1).place (x=10, y=40)
+
+lblPregunta2=Label(interfaz,text="Ingrese el segundo numero").place(x=10, y=70)
+n2=DoubleVar()
+txtPregunta2=Entry(interfaz,textvariable=n2).place (x=10, y=100)
+
+btnSolucion=Button (interfaz,text="Calcular", command=calcular).place(x=10,y=130)
+
+interfaz.mainloop()#final de la interfaz
